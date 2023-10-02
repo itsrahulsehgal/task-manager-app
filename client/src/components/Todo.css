@@ -1,0 +1,37 @@
+/* todo.css */
+
+.todo-card {
+    background-color: #f0f0f0; /* Background color for the card */
+    border: 1px solid #ccc; /* Border for the card */
+    border-radius: 5px; /* Rounded corners for the card */
+    padding: 15px;
+    margin: 10px;
+    width: 250px; /* Adjust the width as needed */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Box shadow for a subtle elevation effect */
+  }
+  
+  .todo-header {
+    background-color: #007bff; /* Header background color */
+    color: #fff; /* Header text color */
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+  }
+  
+  .todo-content {
+    padding: 10px;
+  }
+  
+  .todo-title {
+    font-size: 1.2rem; /* Title font size */
+    margin: 0;
+    color: #333; /* Title text color */
+  }
+  
+  .todo-description {
+    margin-top: 10px; /* Spacing between title and description */
+    color: #666; /* Description text color */
+  }
+  
+  /* Add more custom styles as needed */
+  
