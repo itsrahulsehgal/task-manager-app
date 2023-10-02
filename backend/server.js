@@ -16,7 +16,7 @@ app.use(cookieParser());
 const port = process.env.PORT || 3000
 const corsOptions = {
   origin:['http://localhost:3001','http://localhost:3000',
-  'https://personalised-task-manager-oyby.vercel.app'], 
+  'https://task-manager-app-x4qo.vercel.app/'], 
   methods : ["POST","GET"],
   credentials: true, 
 };
