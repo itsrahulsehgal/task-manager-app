@@ -9,7 +9,7 @@ import { userRouter } from './routes/usersRouter.js';
 const app = express()
 app.use(express.json())
 const corsOptions = {
-    origin:['https://task-manager-app-x4qo.vercel.app'], 
+    origin:['task-manager-app-x4qo.vercel.app'], 
     methods : ["POST","GET"],
     credentials: true, 
   };
