@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-
+const REACT_APP_API_BASE_URL = "https://task-manager-app-bk1x.vercel.app/"
 export default function Todo() {
     const [listOfTodos, setListOfTodos] = useState([])
 
@@ -19,7 +19,7 @@ const InputArea = ({ listOfTodos, setListOfTodos }) => {
     }
 
     const addTodo = () => {
-        Axios.post(process.env.REACT_APP_API_BASE_URL+"/todo/create", {
+        Axios.post(REACT_APP_API_BASE_URL+"/todo/create", {
             todo,
         }, {
             headers: {
@@ -47,7 +47,7 @@ const InputArea = ({ listOfTodos, setListOfTodos }) => {
 const TodoList = ({ listOfTodos, setListOfTodos }) => {
 
     useEffect(() => {
-        Axios.get(process.env.REACT_APP_API_BASE_URL+"/todo/read", {
+        Axios.get(REACT_APP_API_BASE_URL+"/todo/read", {
             headers: {
                 authorization: localStorage.getItem("token")
             }
@@ -59,7 +59,7 @@ const TodoList = ({ listOfTodos, setListOfTodos }) => {
 
 
     const deleteTodo = (_id) => {
-        Axios.post(process.env.REACT_APP_API_BASE_URL+"/todo/delete", {
+        Axios.post(REACT_APP_API_BASE_URL+"/todo/delete", {
             _id,
         }, {
             headers: {
@@ -78,7 +78,7 @@ const TodoList = ({ listOfTodos, setListOfTodos }) => {
     const updateTodo = (_id, todo, mark) => {
         let val = prompt("Update the todo", todo)
 
-        Axios.post(process.env.REACT_APP_API_BASE_URL+"/todo/update", {
+        Axios.post(REACT_APP_API_BASE_URL+"/todo/update", {
             _id,
             todo: val,
             mark,
@@ -97,7 +97,7 @@ const TodoList = ({ listOfTodos, setListOfTodos }) => {
     }
 
     const markTodo = (_id, todo, mark) => {
-        Axios.post(process.env.REACT_APP_API_BASE_URL+"/todo/update", {
+        Axios.post(REACT_APP_API_BASE_URL+"/todo/update", {
             _id,
             todo,
             mark: mark,
