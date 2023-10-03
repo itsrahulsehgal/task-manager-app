@@ -1,0 +1,336 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: bisque;
+}
+
+.inputText {
+  width: 40vw;
+  height: 4vh;
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 5px;
+  border: none;
+}
+
+.inputArea {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 40vh;
+  gap: 5px;
+}
+
+.addBtn {
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  padding: 10px;
+  background-color: lightgray;
+  user-select: none;
+  cursor: pointer;
+}
+
+.addBtn:hover {
+  background-color: rgb(145, 94, 32);
+  color: white;
+}
+
+.listOfTodos {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 5px;
+  margin-bottom: 5vh;
+}
+
+.todo {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 40vw;
+  padding: 5px;
+  border-radius: 5px;
+  background-color: rgb(63, 47, 27);
+  gap: 1vh;
+}
+
+.todo p {
+  color: white;
+  font-size: 1.2rem;
+}
+
+.todo .btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(191, 168, 141);
+  border-radius: 5px;
+  padding: 3px;
+  gap: 5px;
+
+}
+
+.todo .btn {
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  background-color: rgb(191, 168, 141);
+  user-select: none;
+  cursor: pointer;
+  padding: 2px;
+}
+
+.todo .btn:hover {
+  background-color: rgb(227, 207, 182);
+}
+
+.login {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 15vh 5vw;
+  align-items: center;
+  gap: 10px;
+}
+
+.login input {
+  width: 20vw;
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 5px;
+  border: none;
+}
+
+.login button {
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  padding: 10px;
+  background-color: lightgray;
+  user-select: none;
+  cursor: pointer;
+}
+
+.register {
+  display: flex;
+  flex-direction: column;
+  margin: 15vh 5vw;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.register input {
+  width: 20vw;
+  font-size: 20px;
+  padding: 4px;
+  border-radius: 5px;
+  border: none;
+}
+
+.register button {
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  padding: 10px;
+  background-color: lightgray;
+  user-select: none;
+  cursor: pointer;
+}
+
+.register h3 {
+  color: rgb(110, 76, 31);
+  font-size: 20px;
+}
+
+.login h3 {
+  color: rgb(110, 76, 31);
+  font-size: 20px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+  margin: 10vh 5vw;
+
+}
+
+.home article {
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.home article h1 {
+  color: rgb(110, 76, 31);
+  font-size: 40px;
+}
+
+.home article h3 {
+  color: rgb(110, 76, 31);
+  font-size: 20px;
+}
+
+.todoListBtn {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  padding: 10px;
+  background-color: lightgray;
+  user-select: none;
+}
+
+.todoListBtn:hover {
+  background-color: rgb(227, 207, 182);
+}
+
+.home article p {
+  color: rgb(110, 76, 31);
+  font-size: 20px;
+}
+
+.home footer {
+  width: 100%;
+  height: 5vh;
+  background-color: rgb(110, 76, 31);
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.home footer p {
+  font-size: 20px;
+}
+
+.home footer p a {
+  color: white;
+  text-decoration: none;
+}
+
+.home footer p a:hover {
+  color: rgb(191, 168, 141);
+}
+
+.quikAuth {
+  font-size: 15px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: rgb(110, 76, 31);
+}
+
+.quikAuth a {
+  color: rgb(110, 76, 31);
+  text-decoration: none;
+}
+
+.quikAuth a:hover {
+  color: rgb(191, 168, 141);
+}
+
+
+.header {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  z-index: 100;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(110, 76, 31);
+  padding: 1vh;
+  gap: 5px;
+  margin-bottom: 5vh;
+}
+
+.header .logo {
+  font-size: 30px;
+  color: white;
+  border: 2px solid white;
+  border-radius: 5px;
+  padding: 3px 3px;
+  user-select: none;
+  margin-left: 1vw;
+}
+
+.header .logo a {
+  color: white;
+  text-decoration: none;
+}
+
+.header .logo a:hover {
+  color: rgb(191, 168, 141);
+  border-color: rgb(191, 168, 141);
+}
+
+.header .nav {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  margin-right: 1vw;
+}
+
+.header .nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+  user-select: none;
+}
+
+.header .nav a:hover {
+  color: rgb(191, 168, 141);
+}
+
+.header .nav .logout button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+  padding: 10px;
+  background-color: lightgray;
+  user-select: none;
+}
+
+.header .nav .logout button:hover {
+  background-color: rgb(227, 207, 182);
+}
+
+@media screen and (max-width: 500px) {
+  .todo {
+    width: 90vw;
+  }
+
+  .login input {
+    width: 80vw;
+  }
+
+  .register input {
+    width: 80vw;
+  }
+
+  .inputArea {
+    flex-direction: column;
+    gap: 3vh;
+  }
+
+  .inputArea .inputText {
+    width: 80vw;
+  }
+
+  body {
+    touch-action: pan-y;
+  }
+}

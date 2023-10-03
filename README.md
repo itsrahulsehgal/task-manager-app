@@ -16,21 +16,17 @@ Install dependencies of all packages includes client(for frontend), server(for b
 ### For frontend
 ```bash
   cd client
-  yarn install
-  yarn run dev
+  npm install
+  npm run dev
 ```
 ### For backend
 ```bash
   cd server
-  yarn install
-  nodemon server.js
+  npm install
+  node index.js
 ```
-### For database
-```bash
-  cd database
-  yarn install
-```
-To connect the database, change {mongoURI} to your URI string of mongoDB database.
+
+To connect the database, change {DATABASE_CONNECTION_STRING} to your URI string of mongoDB database.
 
 ## Flowchart
 
