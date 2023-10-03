@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Axios from 'axios';
-const REACT_APP_API_BASE_URL = "https://task-manager-app-bk1x.vercel.app/"
+const REACT_APP_API_BASE_URL = "https://task-manager-app-bk1x.vercel.app"
 export default function Todo() {
     const [listOfTodos, setListOfTodos] = useState([])
 
