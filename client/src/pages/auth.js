@@ -1,7 +1,6 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import Axios from 'axios'
-const REACT_APP_API_BASE_URL = "https://task-manager-app-bk1x.vercel.app"
 
 const Register = () => {
 
@@ -22,7 +21,7 @@ const Register = () => {
         alert("Password or Username is empty!")
       }
       else{
-      Axios.post(REACT_APP_API_BASE_URL+"/auth/register", {
+      Axios.post(process.env.REACT_APP_API_BASE_URL+"/auth/register", {
         username,
         password,
       }).then((response)=>{
@@ -72,7 +71,7 @@ const Login = () => {
   }
 
   const login = ()=>{
-    Axios.post(REACT_APP_API_BASE_URL+"/auth/login",{
+    Axios.post(process.env.REACT_APP_API_BASE_URL+"/auth/login",{
       username,
       password,
     }).then((response)=>{
