@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
+import axios from '../axios';
 export default function Todo() {
     const [listOfTodos, setListOfTodos] = useState([])
 
@@ -18,7 +18,7 @@ const InputArea = ({ listOfTodos, setListOfTodos }) => {
     }
 
     const addTodo = () => {
-        Axios.post(process.env.REACT_APP_API_BASE_URL+"/todo/create", {
+        axios.post("/todo/create", {
             todo,
         }, {
             headers: {
@@ -58,7 +58,7 @@ const TodoList = ({ listOfTodos, setListOfTodos }) => {
 
 
     const deleteTodo = (_id) => {
-        Axios.post(process.env.REACT_APP_API_BASE_URL+"/todo/delete", {
+        axios.post("/todo/delete", {
             _id,
         }, {
             headers: {
@@ -77,7 +77,7 @@ const TodoList = ({ listOfTodos, setListOfTodos }) => {
     const updateTodo = (_id, todo, mark) => {
         let val = prompt("Update the todo", todo)
 
-        Axios.post(process.env.REACT_APP_API_BASE_URL+"/todo/update", {
+        axios.post("/todo/update", {
             _id,
             todo: val,
             mark,
@@ -96,7 +96,7 @@ const TodoList = ({ listOfTodos, setListOfTodos }) => {
     }
 
     const markTodo = (_id, todo, mark) => {
-        Axios.post(process.env.REACT_APP_API_BASE_URL+"/todo/update", {
+        axios.post("/todo/update", {
             _id,
             todo,
             mark: mark,

@@ -16,7 +16,7 @@ const corsOptions ={
 app.use(express.json())
 app.use(cors(corsOptions))
 dotenv.config()
-const port = 5000 || process.env.PORT
+const port = process.env.PORT || 5000
 
 mongoose.connect(
     process.env.DATABASE_CONNECTION_STRING
