@@ -28,7 +28,7 @@ app.use("/auth",userRouter)
 app.use("/todo" , todoRouter)
 app.get("/", (req, res) =>
 {
-    res.send(`${port}`);
+    res.send("Welcome to the server");
 })
 app.listen(port,()=>{
     console.log(`Server is running at ${port}`)
