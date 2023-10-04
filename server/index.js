@@ -26,10 +26,10 @@ mongoose.connect(
 
 app.use("/auth",userRouter)
 app.use("/todo" , todoRouter)
-app.get("/", (req, res) =>
-{
-    res.send("Welcome to the server");
-})
+app.get('/', (req, res) => {
+    res.json({message:'welcome to the server'})
+  });
+  
 app.listen(port,()=>{
     console.log(`Server is running at ${port}`)
 })
