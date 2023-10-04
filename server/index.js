@@ -8,6 +8,7 @@ import { userRouter } from './routes/usersRouter.js';
 
 const app = express()
 const corsOptions = {
+    "Access-Control-Allow-Origin": "http://task-manager-app-x4qo.vercel.app",
     origin:['http://task-manager-app-x4qo.vercel.app'], 
     methods : ["POST","GET"],
     credentials: true, 
