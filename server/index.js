@@ -7,13 +7,22 @@ import { todoRouter } from './routes/todoRouter.js';
 import { userRouter } from './routes/usersRouter.js';
 
 const app = express()
-const corsOptions = {
-    "Access-Control-Allow-Origin": "http://task-manager-app-x4qo.vercel.app",
-    origin:['http://task-manager-app-x4qo.vercel.app'], 
-    methods : ["POST","GET"],
-    credentials: true, 
-  };
-app.use(cors(corsOptions))
+// const corsOptions = {
+//     "Access-Control-Allow-Origin": ,
+//     origin:['http://task-manager-app-x4qo.vercel.app'], 
+//     methods : ["POST","GET"],
+//     credentials: true, 
+//   };
+  app.use((req, res, next) => {
+    res.setHeader("Access-Control-Allow-Origin", "http://task-manager-app-x4qo.vercel.app");
+    res.header(
+      "Access-Control-Allow-Headers",
+      "Origin, X-Requested-With, Content-Type, Accept"
+    );
+    next();
+  });
+  
+// app.use(cors(corsOptions))
 app.use(express.json())
 dotenv.config()
 const port = 3003
