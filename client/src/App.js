@@ -4,10 +4,8 @@ import Home from './pages/home';
 import Todo from './pages/todo';
 import {Register , Login} from './pages/auth';
 import NavBar from './components/NavBar';
-import axios from 'axios';
 function App() {
   const navigate = useNavigate();
-  axios.defaults.withCredentials = true;
   return (
   <>
   <NavBar/>

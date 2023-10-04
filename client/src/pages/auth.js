@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
-import Axios from 'axios'
+import axios from 'axios'
 
 const Register = () => {
 
@@ -21,7 +21,7 @@ const Register = () => {
         alert("Password or Username is empty!")
       }
       else{
-      Axios.post(process.env.REACT_APP_API_BASE_URL+"/auth/register", {
+      axios.post(process.env.REACT_APP_API_BASE_URL+"/auth/register", {
         username,
         password,
       }).then((response)=>{
@@ -71,7 +71,7 @@ const Login = () => {
   }
 
   const login = ()=>{
-    Axios.post(process.env.REACT_APP_API_BASE_URL+"/auth/login",{
+    axios.post(process.env.REACT_APP_API_BASE_URL+"/auth/login",{
       username,
       password,
     }).then((response)=>{
