@@ -8,13 +8,12 @@ import { userRouter } from './routes/usersRouter.js';
 
 const app = express()
 const corsOptions = {
-    origin:['*'], 
+    origin:['http://task-manager-app-x4qo.vercel.app'], 
     methods : ["POST","GET"],
     credentials: true, 
   };
 app.use(cors(corsOptions))
 app.use(express.json())
-
 dotenv.config()
 const port = 3003
 
