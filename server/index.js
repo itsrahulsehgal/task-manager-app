@@ -2,7 +2,7 @@ import express, { request } from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors'
 import dotenv from 'dotenv'
-
+import bodyParser from 'body-parser';
 import { todoRouter } from './routes/todoRouter.js';
 import { userRouter } from './routes/usersRouter.js';
 
@@ -15,6 +15,9 @@ const corsOptions ={
 }
 app.use(express.json())
 app.use(cors(corsOptions))
+app.use(bodyParser.json({ limit: '30mb', extended: true }));
+app.use(bodyParser.urlencoded({ limit: '30mb', extended: true }));
+
 dotenv.config()
 const port = process.env.PORT || 5000
 
