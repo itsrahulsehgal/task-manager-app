@@ -8,7 +8,8 @@
     "start": "nodemon index.js"
   },
   "engines": {
-    "node": "v18.16.0"},
+    "node": "v18.16.0"
+  },
   "author": "",
   "license": "ISC",
   "dependencies": {
