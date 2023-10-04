@@ -19,7 +19,7 @@ dotenv.config()
 const port = process.env.PORT || 5000
 
 mongoose.connect(
-    process.env.DATABASE_CONNECTION_STRING
+    `${process.env.DATABASE_CONNECTION_STRING}`
 ).then(()=>{
     console.log("Database is connected")
 })
