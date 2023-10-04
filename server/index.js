@@ -28,7 +28,7 @@ const port = 3003
 
 
 mongoose.connect(
-    process.env.DATABASE_CONNECTION_STRING
+    `${process.env.DATABASE_CONNECTION_STRING}`
 ).then(()=>{
     console.log("Database is connected")
 })
