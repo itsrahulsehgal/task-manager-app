@@ -46,7 +46,7 @@ const InputArea = ({ listOfTodos, setListOfTodos }) => {
 const TodoList = ({ listOfTodos, setListOfTodos }) => {
 
     useEffect(() => {
-        Axios.get(process.env.REACT_APP_API_BASE_URL+"/todo/read", {
+        axios.get("/todo/read", {
             headers: {
                 authorization: localStorage.getItem("token")
             }
