@@ -7,13 +7,14 @@ import { todoRouter } from './routes/todoRouter.js';
 import { userRouter } from './routes/usersRouter.js';
 
 const app = express()
-app.use(express.json())
 const corsOptions = {
     origin:['*'], 
     methods : ["POST","GET"],
     credentials: true, 
   };
 app.use(cors(corsOptions))
+app.use(express.json())
+
 dotenv.config()
 const port = 3003
 
